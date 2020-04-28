@@ -274,7 +274,7 @@ button:focus,
 }
 
 .header .profile-img {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .header .content-wrapper {}
@@ -328,6 +328,19 @@ a.hire-cta:hover {
 
 .header .content .about-text {
     margin: 10px 0;
+}
+
+.img-avatar {
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.download-cv {
+    font-weight: bold;
+    font-size: 12px;
+    color: #000;
+    text-align: center;
+    display: block;
 }
 
 .header .btn {
