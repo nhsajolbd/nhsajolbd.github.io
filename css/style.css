@@ -76,7 +76,7 @@ h6 {
  * LINK STYLE
  *------------------------------------------*/
 a {
-    color: #336bcc;
+    color: #37a000;
     text-decoration: none;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
@@ -129,7 +129,7 @@ ul {
 
 /*btn-primary*/
 .btn-primary {
-    background-color: #336bcc;
+    background-color: #37a000;
 }
 
 .btn-primary:hover,
@@ -290,14 +290,12 @@ button:focus,
 }
 
 .header .content .lead {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
-    color: #336bcc;
-    border-top: 1px solid #ece8ef;
+    color: #37a000;
+    border-bottom: 1px solid #ece8ef;
     letter-spacing: 1px;
     display: block;
-    padding-top: 10px;
-    margin-top: 11px;
     padding-bottom: 10px;
 }
 
@@ -331,7 +329,10 @@ a.hire-cta:hover {
 }
 
 .img-avatar {
-    border-radius: 10px;
+    max-width: 200px;
+    border-radius: 8px;
+    display: block;
+    margin: 0;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -339,7 +340,7 @@ a.hire-cta:hover {
     font-weight: bold;
     font-size: 12px;
     color: #000;
-    text-align: center;
+    /* text-align: center; */
     display: block;
 }
 
@@ -355,7 +356,7 @@ a.hire-cta:hover {
     }
 
     .header img {
-        margin: 0 auto;
+        margin: 40px auto 5px;
     }
 
     .header .content {
@@ -439,7 +440,7 @@ a.hire-cta:hover {
 }
 
 .progress-item .progress-bar {
-    background-color: #336bcc;
+    background-color: #37a000;
     box-shadow: none;
     text-align: right;
 }
