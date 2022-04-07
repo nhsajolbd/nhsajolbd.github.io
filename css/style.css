@@ -271,6 +271,7 @@ button:focus,
     padding: 20px !important;
     margin: 0;
     position: relative;
+    text-align: center;
 }
 
 .header .profile-img {
@@ -326,13 +327,14 @@ a.hire-cta:hover {
 
 .header .content .about-text {
     margin: 10px 0;
+    line-height: 1.6;
 }
 
 .img-avatar {
-    max-width: 200px;
-    border-radius: 8px;
     display: block;
-    margin: 0;
+    margin: 25px auto 0;
+    max-width: 170px;
+    border-radius: 50%;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -480,37 +482,35 @@ a.hire-cta:hover {
 }
 
 .portfolio-item .portfolio-info {
-    position: absolute;
+    position: relative;
     bottom: 0;
-    padding: 30px 15px 5px;
+    padding: 15px 0 0;
     width: 100%;
-    background: -webkit-linear-gradient(top,
-            transparent 0%,
-            rgba(0, 0, 0, 0.5) 100%);
+    
 }
 
 .portfolio-item .portfolio-info h3 {
     margin: 0;
     line-height: 1;
-    color: #ffffff;
+    color: rgb(67, 67, 67);
 }
 
 .portfolio-item .portfolio-info small {
-    color: #ffffff;
-}
-
-.portfolio-item:hover .portfolio-info {
-    background: -webkit-linear-gradient(top,
-            transparent 0%,
-            #000 100%);
+    color: rgb(67, 67, 67);
 }
 
 /*-------------------
  * Content Item
  *-------------------*/
 
+ .exp-list {
+     display: flex;
+     flex-wrap: wrap;
+ }
+
 .content-item {
     margin-bottom: 40px;
+    flex: 1 0 50%;
 }
 
 .content-item h3 {
@@ -524,7 +524,11 @@ a.hire-cta:hover {
 
 .content-item h4 {
     margin: 0;
-    line-height: 1;
+    line-height: 1.3;
+}
+
+.content-item h5 {
+    color: #b5b5b5;
 }
 
 .content-item small {
@@ -618,4 +622,8 @@ a.hire-cta:hover {
     margin: 0;
     text-align: center;
     top: 65%;
+}
+
+.d-none {
+    display: none !important;
 }
