@@ -246,7 +246,7 @@ button:focus,
 
 @media (max-width : 480px) {
     .section-wrapper {
-        padding: 30px 20px;
+        padding: 20px 5px;
     }
 }
 
@@ -423,6 +423,12 @@ a.hire-cta:hover {
 /*-------------------
  * Skills Progressbar
  *-------------------*/
+
+.progress-stack {
+    position: relative;
+    margin: 3rem 0 2rem;
+    max-width: 100%;
+}
 
 .progress-item {
     position: relative;
