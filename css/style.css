@@ -291,8 +291,8 @@ button:focus,
 }
 
 .header .content .lead {
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: normal;
     color: #37a000;
     border-bottom: 1px solid #ece8ef;
     letter-spacing: 1px;
