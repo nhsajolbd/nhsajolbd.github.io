@@ -304,7 +304,7 @@ a.hire-cta {
     text-align: center;
     border-radius: 3px;
     background: #37A000;
-    border: none;
+    border: 1px solid #37A000;
     padding: 6px 18px 3px;
     color: #fff;
     display: block;
@@ -312,8 +312,24 @@ a.hire-cta {
     margin-bottom: 15px;
 }
 
-a.hire-cta:hover {
-    background: #008329;
+a.hire-cta.upwork {
+    background: #37A000;
+    border: 1px solid #37A000;
+}
+
+a.hire-cta.upwork:hover {
+    background: #328d01;
+    border: 1px solid #328d01;
+}
+
+a.hire-cta.linkedin {
+    background: #0077B5;
+    border-color: #0077B5;
+}
+
+a.hire-cta.linkedin:hover {
+    background: #005f9e;
+    border-color: #005f9e;
 }
 
 .interest-item span {
@@ -391,11 +407,11 @@ a.hire-cta:hover {
 
 .social-icon li a {
     display: block;
-    font-size: 12px;
+    font-size: 25px;
     color: #333333;
-    width: 34px;
-    height: 34px;
-    line-height: 33px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
     border-radius: 2px;
     border: 2px solid #eeeeee;
@@ -479,6 +495,11 @@ a.hire-cta:hover {
     position: relative;
     display: block;
     margin-bottom: 30px;
+    border: 1px solid #eaeaea;
+}
+
+.portfolio-item:hover {
+    background-color: #00832a18;
 }
 
 .portfolio-item .portfolio-thumb img {
@@ -490,15 +511,19 @@ a.hire-cta:hover {
 .portfolio-item .portfolio-info {
     position: relative;
     bottom: 0;
-    padding: 15px 0 0;
+    padding: 15px 15px 10px;
     width: 100%;
-    
+
 }
 
 .portfolio-item .portfolio-info h3 {
     margin: 0;
     line-height: 1;
     color: rgb(67, 67, 67);
+}
+
+.portfolio-item .portfolio-info p {
+    margin: 0;
 }
 
 .portfolio-item .portfolio-info small {
@@ -509,10 +534,10 @@ a.hire-cta:hover {
  * Content Item
  *-------------------*/
 
- .exp-list {
-     display: flex;
-     flex-wrap: wrap;
- }
+.exp-list {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .content-item {
     margin-bottom: 40px;
