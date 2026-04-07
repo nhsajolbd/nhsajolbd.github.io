@@ -349,7 +349,8 @@ a.hire-cta.linkedin:hover {
 .img-avatar {
     display: block;
     margin: 25px auto 0;
-    max-width: 170px;
+    max-width: 100%;
+    width: 170px;
     border-radius: 50%;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
