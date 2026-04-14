@@ -1,0 +1,62 @@
+---
+const skills = [
+  { name: "WordPress", level: 95 },
+  { name: "HTML/CSS", level: 95 },
+  { name: "PHP", level: 85 },
+  { name: "JavaScript", level: 80 },
+  { name: "React/Next.js", level: 70 },
+  { name: "MySQL", level: 75 },
+  { name: "Git", level: 85 },
+  { name: "AWS/DevOps", level: 65 }
+];
+
+const techStack = [
+  { name: "WordPress", icon: "🔴" },
+  { name: "PHP", icon: "🐘" },
+  { name: "MySQL", icon: "🗄️" },
+  { name: "JavaScript", icon: "📜" },
+  { name: "React", icon: "⚛️" },
+  { name: "Tailwind", icon: "🎯" },
+  { name: "Git", icon: "📂" },
+  { name: "Ubuntu", icon: "🟠" }
+];
+---
+
+<section id="skills" class="section-padding">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+      Skills
+    </h2>
+    <p class="text-zinc-400 text-center mb-12 max-w-2xl mx-auto">
+      Technologies I work with
+    </p>
+
+    <!-- Tech Stack Icons -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+      {techStack.map((tech) => (
+        <div class="flex items-center gap-2 px-4 py-2 bg-surface rounded-full border border-zinc-800 hover:border-accent/50 transition-colors duration-300">
+          <span class="text-xl">{tech.icon}</span>
+          <span class="text-sm font-medium text-zinc-300">{tech.name}</span>
+        </div>
+      ))}
+    </div>
+
+    <!-- Skill Bars -->
+    <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      {skills.map((skill) => (
+        <div>
+          <div class="flex justify-between mb-2">
+            <span class="font-medium text-zinc-300">{skill.name}</span>
+            <span class="text-accent text-sm">{skill.level}%</span>
+          </div>
+          <div class="h-2 bg-surface rounded-full overflow-hidden">
+            <div 
+              class="h-full bg-gradient-to-r from-accent to-accent-hover rounded-full transition-all duration-1000"
+              style={`width: ${skill.level}%`}
+            ></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

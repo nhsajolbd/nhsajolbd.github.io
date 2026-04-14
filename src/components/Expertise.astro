@@ -1,0 +1,52 @@
+---
+const expertise = [
+  {
+    title: "WordPress Development",
+    description: "Building robust, scalable websites on WordPress - the platform that powers 40% of the internet. From custom themes to complex functionality.",
+    icon: "⚡"
+  },
+  {
+    title: "Custom Theme & Plugin Development",
+    description: "Creating bespoke WordPress themes and plugins tailored to your specific needs. No compromises on design or functionality.",
+    icon: "🎨"
+  },
+  {
+    title: "Website Security",
+    description: "Hardening websites against threats - malware, hackers, and data breaches. Your data and reputation are safe with me.",
+    icon: "🔒"
+  },
+  {
+    title: "Performance Optimization",
+    description: "Making websites blazing fast. Better Core Web Vitals mean better SEO, higher engagement, and more conversions.",
+    icon: "🚀"
+  }
+];
+---
+
+<section id="expertise" class="section-padding bg-surface">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+      Expertise
+    </h2>
+    <p class="text-zinc-400 text-center mb-12 max-w-2xl mx-auto">
+      Here's what I specialize in
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      {expertise.map((item, index) => (
+        <div 
+          class="group p-8 bg-background rounded-xl border border-zinc-800 hover:border-accent/50 transition-all duration-300"
+          style={`animation-delay: ${index * 100}ms`}
+        >
+          <div class="text-4xl mb-4">{item.icon}</div>
+          <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-accent transition-colors">
+            {item.title}
+          </h3>
+          <p class="text-zinc-400 leading-relaxed">
+            {item.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

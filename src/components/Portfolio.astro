@@ -1,0 +1,168 @@
+---
+const projects = [
+  {
+    name: "Experience First",
+    url: "https://www.exp1.com/",
+    image: "/img/portfolio/Experience-First.png",
+    type: "Custom"
+  },
+  {
+    name: "Drive Arabia",
+    url: "https://www.drivearabia.com/",
+    image: "/img/portfolio/Drive-Arabia.png",
+    type: "Custom"
+  },
+  {
+    name: "Deshi Commerce",
+    url: "https://deshicommerce.com/",
+    image: "/img/portfolio/Deshi-Commerce.png",
+    type: "Custom"
+  },
+  {
+    name: "Vatican City Tour",
+    url: "https://vaticantourrome.com/",
+    image: "/img/portfolio/Vatican-Tours.png",
+    type: "Custom"
+  },
+  {
+    name: "Stylish",
+    url: "https://styylish.com/",
+    image: "/img/portfolio/Styylish.png",
+    type: "Custom"
+  },
+  {
+    name: "Smile HB Dental",
+    url: "https://smilehb.com/",
+    image: "/img/portfolio/Smile-HB-Dental.png",
+    type: "Elementor"
+  },
+  {
+    name: "Alpha Roof Plumbing",
+    url: "https://alpharoofplumbing.com.au/",
+    image: "/img/portfolio/Alpha-Roof-Plumbing.png",
+    type: "Elementor"
+  },
+  {
+    name: "Cherry Homes",
+    url: "https://www.cherryhomes.com.au/",
+    image: "/img/portfolio/Cherry-Homes.png",
+    type: "Elementor"
+  },
+  {
+    name: "Instyle Glass & Aluminium",
+    url: "https://instyleglassandaluminium.com.au/",
+    image: "/img/portfolio/Instyle-Glass-And-Aluminium.png",
+    type: "Elementor"
+  },
+  {
+    name: "Revolution Plumbing",
+    url: "https://www.revolutionplumbingsolutions.com.au/",
+    image: "/img/portfolio/Revolution-Plumbing-Solutions.png",
+    type: "Elementor"
+  },
+  {
+    name: "SLA Medical Clinic",
+    url: "https://slamedical.co.uk/",
+    image: "/img/portfolio/SLA-Medical-Clinic.png",
+    type: "Divi"
+  },
+  {
+    name: "Stirling Power Solutions",
+    url: "https://spselectrical.com/",
+    image: "/img/portfolio/Stirling-Power-Solutions.png",
+    type: "Elementor"
+  },
+  {
+    name: "Tradexcel Ceramics",
+    url: "https://www.tradexcelceramics.com/",
+    image: "/img/portfolio/Tradexcel-Ceramics.png",
+    type: "Custom"
+  },
+  {
+    name: "SI Brands",
+    url: "https://sibrands.co",
+    image: "/img/portfolio/Si-Brands.png",
+    type: "Custom"
+  },
+  {
+    name: "Workout Guru",
+    url: "https://workoutguru.fit/",
+    image: "/img/portfolio/Workout-Guru.png",
+    type: "Custom"
+  },
+  {
+    name: "DT Plumbing & Gas",
+    url: "https://dtplumbingandgas.com.au/",
+    image: "/img/portfolio/DT-Plumbing-Gas-Fitting-Services.png",
+    type: "Elementor"
+  },
+  {
+    name: "Silkwood Landscapes",
+    url: "https://silkwoodlandscapes.com.au/",
+    image: "/img/portfolio/Silkwood-Landscapes.png",
+    type: "Elementor"
+  },
+  {
+    name: "Kingfisher Homes",
+    url: "https://kingfisherhomes.com.au/",
+    image: "/img/portfolio/Kingfisher-Homes.png",
+    type: "Elementor"
+  },
+  {
+    name: "Knights Vacuum Excavations",
+    url: "https://knightsvacuumexcavations.com.au/",
+    image: "/img/portfolio/Knights-Vacuum-Excavations.png",
+    type: "Elementor"
+  },
+  {
+    name: "Property Plus Building",
+    url: "https://propertyplusbuilding.com.au/",
+    image: "/img/portfolio/Property-Plus.png",
+    type: "Elementor"
+  }
+];
+---
+
+<section id="portfolio" class="section-padding bg-surface">
+  <div class="container mx-auto max-w-6xl">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+      Portfolio
+    </h2>
+    <p class="text-zinc-400 text-center mb-12 max-w-2xl mx-auto">
+      Some of the projects I've worked on
+    </p>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {projects.map((project, index) => (
+        <a 
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group block bg-background rounded-xl overflow-hidden border border-zinc-800 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 transition-all duration-300"
+          style={`animation-delay: ${index * 50}ms`}
+        >
+          <div class="aspect-video overflow-hidden">
+            <img 
+              src={project.image}
+              alt={project.name}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2">
+              <h3 class="text-lg font-semibold text-white group-hover:text-accent transition-colors">
+                {project.name}
+              </h3>
+              <span class="text-xs px-2 py-1 bg-surface rounded-full text-zinc-400 shrink-0">
+                {project.type}
+              </span>
+            </div>
+            <p class="text-sm text-zinc-500 mt-1 truncate">
+              {project.url.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+            </p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

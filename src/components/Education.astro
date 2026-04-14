@@ -1,0 +1,66 @@
+---
+const education = [
+  {
+    degree: "Bachelor of Business Administration",
+    institution: "National University",
+    location: "Dhaka, Bangladesh",
+    period: "2011 - 2015"
+  },
+  {
+    degree: "SSC & HSC",
+    institution: "BAF Shaheen School & College",
+    location: "Dhaka, Bangladesh",
+    period: "2008 - 2010"
+  }
+];
+
+const interests = [
+  "Artificial Intelligence",
+  "Space Technology",
+  "Blockchain",
+  "Forex Trading",
+  "Traveling",
+  "Guitar",
+  "Books",
+  "Meditation"
+];
+---
+
+<section id="education" class="section-padding bg-surface">
+  <div class="container mx-auto max-w-4xl">
+    <!-- Education -->
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+      Education
+    </h2>
+    <p class="text-zinc-400 text-center mb-12 max-w-2xl mx-auto">
+      Academic background
+    </p>
+
+    <div class="space-y-6 mb-16">
+      {education.map((edu) => (
+        <div class="p-6 bg-background rounded-xl border border-zinc-800">
+          <p class="text-sm text-accent mb-1">{edu.period}</p>
+          <h3 class="text-xl font-semibold text-white mb-2">{edu.degree}</h3>
+          <p class="text-zinc-400">{edu.institution}</p>
+          <p class="text-zinc-500 text-sm">{edu.location}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Interests -->
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+      Interests
+    </h2>
+    <p class="text-zinc-400 text-center mb-12 max-w-2xl mx-auto">
+      Things I'm passionate about
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-3">
+      {interests.map((interest) => (
+        <span class="px-4 py-2 bg-background rounded-full border border-zinc-800 text-zinc-300 hover:border-accent/50 hover:text-accent transition-colors duration-300">
+          {interest}
+        </span>
+      ))}
+    </div>
+  </div>
+</section>
